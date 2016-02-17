@@ -7,48 +7,64 @@ import me.shib.java.lib.jtelebot.types.*;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Map;
+import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class JBotLogger extends JBotStats {
 
-    private static Logger logger = Logger.getLogger(JBotLogger.class.getName());
+    private Logger logger;
 
     public JBotLogger(BotStatsConfig botStatsConfig) {
         super(botStatsConfig);
+        logger = Logger.getLogger(botStatsConfig.getBotStatsClassName() + "-" + botStatsConfig.getBotUserId());
         String definedLevel = botStatsConfig.getConfig("logLevel");
+        ConsoleHandler handler = new ConsoleHandler();
+        handler.setFormatter(new SimpleFormatter());
         if (definedLevel != null) {
             switch (definedLevel.toUpperCase()) {
                 case "FINEST":
                     logger.setLevel(Level.FINEST);
+                    handler.setLevel(Level.FINEST);
                     break;
                 case "FINER":
                     logger.setLevel(Level.FINER);
+                    handler.setLevel(Level.FINER);
                     break;
                 case "FINE":
                     logger.setLevel(Level.FINE);
+                    handler.setLevel(Level.FINE);
                     break;
                 case "OFF":
                     logger.setLevel(Level.OFF);
+                    handler.setLevel(Level.OFF);
                     break;
                 case "CONFIG":
                     logger.setLevel(Level.CONFIG);
+                    handler.setLevel(Level.CONFIG);
                     break;
                 case "INFO":
                     logger.setLevel(Level.INFO);
+                    handler.setLevel(Level.INFO);
                     break;
                 case "SEVERE":
                     logger.setLevel(Level.SEVERE);
+                    handler.setLevel(Level.SEVERE);
                     break;
                 case "WARNING":
                     logger.setLevel(Level.WARNING);
+                    handler.setLevel(Level.WARNING);
                     break;
                 default:
                     logger.setLevel(Level.ALL);
+                    handler.setLevel(Level.ALL);
             }
         } else {
             logger.setLevel(Level.ALL);
+            handler.setLevel(Level.ALL);
         }
+        logger.addHandler(handler);
     }
 
     @Override
