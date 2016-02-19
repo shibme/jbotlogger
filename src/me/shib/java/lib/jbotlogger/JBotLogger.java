@@ -68,6 +68,11 @@ public class JBotLogger extends JBotStats {
     }
 
     @Override
+    public String getAnalyticsRedirectedURL(long user_id, String url) {
+        return null;
+    }
+
+    @Override
     public void onReceivingUpdate(Update update, IOException e, Date accessTime) {
         String enteringMethod = "onReceivingUpdate";
         logger.entering(this.getClass().getName(), enteringMethod, new Object[]{update, accessTime});
