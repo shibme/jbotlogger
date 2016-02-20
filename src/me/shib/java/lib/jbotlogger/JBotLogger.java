@@ -12,7 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-public class JBotLogger extends JBotStats {
+public final class JBotLogger extends JBotStats {
 
     private Logger logger;
 
