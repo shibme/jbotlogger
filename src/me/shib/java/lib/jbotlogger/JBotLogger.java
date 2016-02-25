@@ -109,81 +109,81 @@ public final class JBotLogger extends JBotStats {
     }
 
     @Override
-    public void onSendingMessage(ChatId chat_id, String text, ParseMode parse_mode, boolean disable_web_page_preview, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
+    public void onSendingMessage(ChatId chat_id, String text, boolean disable_notification, ParseMode parse_mode, boolean disable_web_page_preview, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
         String enteringMethod = "onSendingMessage";
-        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, text, parse_mode, disable_web_page_preview, reply_to_message_id, reply_markup, response, accessTime});
+        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, text, disable_notification, parse_mode, disable_web_page_preview, reply_to_message_id, reply_markup, response, accessTime});
         if (e != null) {
             logger.throwing(this.getClass().getName(), enteringMethod, e);
         }
     }
 
     @Override
-    public void onForwardingMessage(ChatId chat_id, ChatId from_chat_id, long message_id, Message response, IOException e, Date accessTime) {
+    public void onForwardingMessage(ChatId chat_id, ChatId from_chat_id, long message_id, boolean disable_notification, Message response, IOException e, Date accessTime) {
         String enteringMethod = "onForwardingMessage";
-        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, from_chat_id, message_id, response, accessTime});
+        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, from_chat_id, message_id, disable_notification, response, accessTime});
         if (e != null) {
             logger.throwing(this.getClass().getName(), enteringMethod, e);
         }
     }
 
     @Override
-    public void onSendingPhoto(ChatId chat_id, TelegramFile photo, String caption, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
+    public void onSendingPhoto(ChatId chat_id, TelegramFile photo, boolean disable_notification, String caption, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
         String enteringMethod = "onSendingPhoto";
-        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, photo, caption, reply_to_message_id, reply_markup, response, accessTime});
+        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, photo, disable_notification, caption, reply_to_message_id, reply_markup, response, accessTime});
         if (e != null) {
             logger.throwing(this.getClass().getName(), enteringMethod, e);
         }
     }
 
     @Override
-    public void onSendingAudio(ChatId chat_id, TelegramFile audio, int duration, String performer, String title, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
+    public void onSendingAudio(ChatId chat_id, TelegramFile audio, boolean disable_notification, int duration, String performer, String title, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
         String enteringMethod = "onSendingAudio";
-        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, audio, duration, performer, title, reply_to_message_id, reply_markup, response, accessTime});
+        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, audio, disable_notification, duration, performer, title, reply_to_message_id, reply_markup, response, accessTime});
         if (e != null) {
             logger.throwing(this.getClass().getName(), enteringMethod, e);
         }
     }
 
     @Override
-    public void onSendingDocument(ChatId chat_id, TelegramFile document, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
+    public void onSendingDocument(ChatId chat_id, TelegramFile document, boolean disable_notification, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
         String enteringMethod = "onSendingDocument";
-        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, document, reply_to_message_id, reply_markup, response, accessTime});
+        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, document, disable_notification, reply_to_message_id, reply_markup, response, accessTime});
         if (e != null) {
             logger.throwing(this.getClass().getName(), enteringMethod, e);
         }
     }
 
     @Override
-    public void onSendingSticker(ChatId chat_id, TelegramFile sticker, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
+    public void onSendingSticker(ChatId chat_id, TelegramFile sticker, boolean disable_notification, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
         String enteringMethod = "onSendingSticker";
-        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, sticker, reply_to_message_id, reply_markup, response, accessTime});
+        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, sticker, disable_notification, reply_to_message_id, reply_markup, response, accessTime});
         if (e != null) {
             logger.throwing(this.getClass().getName(), enteringMethod, e);
         }
     }
 
     @Override
-    public void onSendingVideo(ChatId chat_id, TelegramFile video, int duration, String caption, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
+    public void onSendingVideo(ChatId chat_id, TelegramFile video, boolean disable_notification, int duration, String caption, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
         String enteringMethod = "onSendingVideo";
-        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, video, duration, caption, reply_to_message_id, reply_markup, response, accessTime});
+        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, video, disable_notification, duration, caption, reply_to_message_id, reply_markup, response, accessTime});
         if (e != null) {
             logger.throwing(this.getClass().getName(), enteringMethod, e);
         }
     }
 
     @Override
-    public void onSendingVoice(ChatId chat_id, TelegramFile voice, int duration, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
+    public void onSendingVoice(ChatId chat_id, TelegramFile voice, boolean disable_notification, int duration, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
         String enteringMethod = "onSendingVoice";
-        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, voice, duration, reply_to_message_id, reply_markup, response, accessTime});
+        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, voice, disable_notification, duration, reply_to_message_id, reply_markup, response, accessTime});
         if (e != null) {
             logger.throwing(this.getClass().getName(), enteringMethod, e);
         }
     }
 
     @Override
-    public void onSendingLocation(ChatId chat_id, float latitude, float longitude, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
+    public void onSendingLocation(ChatId chat_id, float latitude, float longitude, boolean disable_notification, long reply_to_message_id, ReplyMarkup reply_markup, Message response, IOException e, Date accessTime) {
         String enteringMethod = "onSendingLocation";
-        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, latitude, longitude, reply_to_message_id, reply_markup, response, accessTime});
+        logger.entering(this.getClass().getName(), enteringMethod, new Object[]{chat_id, latitude, longitude, disable_notification, reply_to_message_id, reply_markup, response, accessTime});
         if (e != null) {
             logger.throwing(this.getClass().getName(), enteringMethod, e);
         }
