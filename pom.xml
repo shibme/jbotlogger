@@ -5,7 +5,7 @@
 
     <groupId>me.shib.java.lib</groupId>
     <artifactId>jbotlogger</artifactId>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
     <name>JBotLogger</name>
     <description>A library that simply logs all the analytics data that are sent from telegram bots built with jbots
         API
@@ -150,7 +150,7 @@
         <dependency>
             <groupId>me.shib.java.lib</groupId>
             <artifactId>jbotstats</artifactId>
-            <version>0.1.1</version>
+            <version>0.2.0</version>
         </dependency>
     </dependencies>
 
