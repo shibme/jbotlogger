@@ -22,7 +22,7 @@ public final class JBotLogger extends JBotStats {
 
     public JBotLogger(BotStatsConfig botStatsConfig, User botInfo) {
         super(botStatsConfig, botInfo);
-        logger = Logger.getLogger(botStatsConfig.getBotStatsClassName() + "-" + botInfo.getUsername());
+        logger = Logger.getLogger(botStatsConfig.getBotStatsClass().getName() + "-" + botInfo.getUsername());
         String definedLevel = botStatsConfig.getConfig("logLevel");
         ConsoleHandler handler = new ConsoleHandler();
         handler.setFormatter(new SimpleFormatter());
