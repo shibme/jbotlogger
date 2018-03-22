@@ -5,7 +5,7 @@
 
     <groupId>me.shib.java.lib</groupId>
     <artifactId>jbotlogger</artifactId>
-    <version>0.2.1</version>
+    <version>0.2.2</version>
     <name>JBotLogger</name>
     <description>A library that simply logs all the analytics data that are sent from telegram bots built with jbots
         API
@@ -58,7 +58,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
+                <version>3.7.0</version>
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
@@ -80,7 +80,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.4</version>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -106,7 +106,7 @@
             <plugin>
                 <groupId>de.jutzig</groupId>
                 <artifactId>github-release-plugin</artifactId>
-                <version>1.1.1</version>
+                <version>1.2.0</version>
                 <executions>
                     <execution>
                         <id>github-upload</id>
@@ -150,7 +150,7 @@
         <dependency>
             <groupId>me.shib.java.lib</groupId>
             <artifactId>jbotstats</artifactId>
-            <version>0.2.1</version>
+            <version>0.2.2</version>
         </dependency>
     </dependencies>
 
